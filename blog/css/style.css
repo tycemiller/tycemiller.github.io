@@ -1,0 +1,306 @@
+/* TO GET AN IDEA OF THE CSS YOU WILL LIKELY BE USING, SEE THE LISTS BELOW. */
+
+        /* 
+        
+        Spacing 
+
+            - padding (shorthand and/or specific properties like padding-bottom, etc.)
+
+            - margin, (shorthand and/or specific properties like margin-top, etc.)
+
+            - letter-spacing, word-spacing, line-height
+
+            - width, max-width, min-width
+            - height, max-height, min-height
+
+        Typography 
+
+            - font-family, font-size, font-style, font-weight
+
+            - text-decoration, text-align
+
+            - color
+
+            - text-shadow, text-transform
+
+        Box, Layout and Border 
+
+            - border (shorthand and/or specific properties like border-top, border-bottom-radius, border-width, etc.)
+
+            - box-shadow
+
+            - display, float, align-items, align-content
+
+            - grid-template-columns, grid-column-gap
+
+            - transform
+
+        Other
+
+            - :nth()-child (to target specific child elements)
+
+            - :focus, :hover, :active (to target link states)
+
+            - @font-face or @import (to import typefaces)
+
+        */
+
+
+/* ------ START WRITING YOUR CODE BELOW ------ */
+@font-face {
+    font-family: ultra-regular;
+    src: url(../fonts/serif/ultra-regular.ttf) format('truetype');
+}
+@font-face {
+    font-family:josefinslab-regular;
+    src: url(../fonts/serif/josefinslab-regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: opensans-regular;
+    src: url(../fonts/sans-serif/opensans-regular.ttf);
+}
+
+html,body{
+    font-size:1rem;
+    font-family: josefinslab-regular, serif;
+    margin: 0 auto;
+    min-width: 56.25rem;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+
+}
+
+h1{
+    font-family: ultra-regular, serif;
+    font-size: 3rem;
+    text-align: center;
+    letter-spacing: 0.30rem;
+    font-weight: none;
+}
+
+h2,h3{
+    font-family: opensans-regular;
+    font-weight: bold;
+}
+
+/*styling the top of the header and nav */
+header {
+    width:110%;
+    top:-10%;
+    left:-10%;
+    transform:rotate(-4deg);
+    padding-bottom: 3rem;
+    padding-top: 0.2rem;
+}
+
+.highlight{
+    background-color:#A52A2A;
+    color: #f5f5dc;
+    padding: 0.67rem;
+    border-radius: 0.75rem;
+    letter-spacing: 0.2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    box-shadow: 5px 5px 5px #888888;
+    border-top-right-radius: 0.125rem;
+    border-bottom-left-radius: 0.125rem;
+    border-top-left-radius: 1.25rem;
+    border-bottom-right-radius: 1.25rem;
+}
+
+nav {
+    text-align: left;
+    list-style-type: none;
+    border-top: .02rem solid #000000;
+    border-bottom: .05rem solid #000000;
+    font-size: 1.5rem;
+
+}
+
+li{
+    display: inline-block;
+    margin: 0 1.5rem 0 1.5rem;
+}
+
+li a{
+    text-decoration: none;
+    color: #1E90FF;
+    font-size: 125%;
+}
+
+
+li a:hover{
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+    font-size: 125%;
+}
+
+.strike{
+    transform: rotate(5deg);
+}
+.strike a{
+    text-decoration: line-through;
+    color:#000000;
+    
+}
+
+
+
+/*styling the main section of the site */
+a{
+    text-decoration: none;
+}
+
+h2{
+    padding-left: 2.5rem;
+    padding-top: 1.5rem;
+    font-size: large;
+}
+
+section{
+    display: flex;
+    padding-left: 2rem;
+    padding-right: .15rem;
+}
+
+section p{
+    padding-right: 2.5rem;
+    margin-top: 0;
+    line-height: 1;
+}
+
+.article-image{
+    float: left;
+    width:auto;
+    height: auto;
+    padding-right: .2rem;
+    padding-bottom: .2rem;
+
+}
+
+article{
+    min-width: 22.5rem;
+}
+
+
+h3{
+    font-size: 0.75rem;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+aside{
+    border-left: solid  thin #505050;
+    padding-left: 2.3rem;
+}
+
+aside p{
+    font-size: 0.75rem;
+    padding-bottom: 1.5rem;
+    border-bottom: solid  thin #505050;
+    margin-right: 5.5rem;
+    padding-right: 0rem;
+}
+
+aside img{
+    width:72%;
+    height: auto;
+    margin-right:0;
+    padding-right: 0;
+
+}
+
+.expand{
+    margin-top: 0;
+    font-size: 0.2rem;
+    
+}
+
+
+/*Image bar*/
+figure{
+    margin: 0;
+    padding: 0;
+}
+.subsection{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: .0rem;
+    padding-right: 1rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 0;
+    
+
+}
+
+figure img {
+    width: 95%;
+    height: auto;
+    max-width: 305px; 
+    max-height: 350px;
+    object-fit: cover;
+    margin-left: none;
+    margin-right: none;
+}
+
+figcaption {
+    font-size:.75rem;
+    padding:.5rem;
+    margin:0;
+    background-color:#f5f5dc;
+    color:black;
+    width: 90%;
+    max-width: 290px; 
+    max-height: 500px;
+}
+
+figcaption a {
+    font-size:.75rem;
+    color:#bebebe;
+}
+
+/*styling the btn */
+.btn{
+    font-family: ultra-regular;
+    font-size: medium;
+    text-align: center;
+    cursor: pointer;
+    color: #f5f5dc;
+    border: none;
+    padding: 0.67rem;
+    background-color: #000080;
+    border-radius: 0.5rem;
+    text-shadow: none;
+    width: 130px;
+    height: 50px;
+    
+}
+
+.btn:hover{
+    background-color: #0000CD;
+}
+
+
+/* styling the footer*/
+footer {
+    clear: both;
+    padding-top: 7rem;
+    padding-right: 5rem;
+    padding-left: 1.5rem;
+}
+
+footer p{
+    float: right;
+    text-align: right;
+}
+
+.copyright{
+    float: left;
+}
+
+
